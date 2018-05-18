@@ -11,13 +11,34 @@
   <body>     
   
     <a-scene altspace="fullspace:true;">
+      <a-assets>
+        <img id="space" src="space.png">
+      </a-assets>
         <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
         <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
         <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        <a-sky color="#ECECEC"></a-sky>
+        <a-sky src="#space" radius="2500"></a-sky>
   
   
       </a-scene>
   </body>
 </html>
+
+<!--
+Distant orb floating in outer space. Distant orb floating in outer space. 
+Space w/ Glowing red orb in the distence
+2 rings appear 2 rings: red=headset/ blue=controller
+2 rings: red=headset/ blue=controller
+"Now, notice the blue ring is controlled by the movement of your hand controller"
+Make both rings surround the orb
+Once two rings surround orb: 
+Hyper Space (move forward to the red orb) Blue orb is same size and to the right of red orb
+Keep the red ring around red orb, blue ring around blue orb.
+
+Both orbs begin counter clockwise orbits
+orbits are same size as rings. orbs complete full orbit every five seconds.
+ Orb grows in size with each orbit. 
+ At beginning of 5th orbit, orb will outsize ring, ending baseline measurement. 
+ Users failure to keep orbs inside rings will also end measurement.
+-->
