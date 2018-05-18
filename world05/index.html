@@ -1,0 +1,572 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
+  </head>
+  <body class="a-body ">
+    <a-scene altspace="fullspace:true" class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+      <a-assets>
+        <img id="uv" src="uv.jpg">
+        <img id="sky" src="sky.jpg">
+        <img id="floor" src="floor.png">
+        <img id="maptest" src="maptest.png">
+        <img id="tree_cone_mtl" src="tree_cone.png">  
+        <img id="tree_cone_mtl_01" src="tree_cone_light_purple.png">  
+        <img id="tree_cone_mtl_02" src="tree_cone_imperial.png"> 
+        <a-asset-item id="pine_tree_gltf" src="pine_tree.gltf"></a-asset-item>             
+      </a-assets>
+
+<!--TEST-->
+
+<a-entity id="test">
+    <a-entity></a-entity>
+    <a-entity scale="7.412 0.397 9.152" id="ride" geometry="" position="0 -1 0" n-mesh-collider="type:environment">
+        <a-animation attribute="position" from="" to="-154.429 363.615 363.796" dur="20000" repeat="indefinite" delay="5000"></a-animation>
+
+    </a-entity>
+    <a-entity id="bottom" geometry=""></a-entity>
+    <a-entity position="-154.429 363.615 363.796" id="top" geometry=""></a-entity>
+    </a-entity>
+
+
+
+<!--END TEST-->
+
+      <a-entity obj-model="mtl:stump.mtl;obj:stump.obj" position="-327.406 -3.17 3.948" scale="127.774 1.524 127.774" id="mountain" n-mesh-collider="type:environment"></a-entity>
+      <a-entity obj-model="mtl:stump.mtl;obj:stump.obj" position="-191.664 -3.864 -172.628" scale="310.553 1.524 127.774" id="mountain-2" n-mesh-collider="type:environment"></a-entity>
+      <a-entity obj-model="mtl:stump.mtl;obj:stump.obj" position="114.301 -2.05 3.948" scale="127.774 1.524 127.774" id="mountain-3" n-mesh-collider="type:environment"></a-entity>
+      <a-entity obj-model="mtl:stump.mtl;obj:stump.obj" position="-144.332 -1.174 187.664" scale="23.883 0.285 33.993" id="mountain-4" n-mesh-collider="type: environment"></a-entity>
+      <a-entity obj-model="mtl:stump.mtl;obj:stump.obj" position="-70.698 -1.174 211.483" scale="23.883 0.285 33.993" id="mountain-5" n-mesh-collider="type: environment"></a-entity>
+      <a-entity obj-model="mtl:stump01.mtl;obj:stump.obj" position="-22.623 -1.174 211.483" scale="23.883 0.285 33.993" id="starter" n-mesh-collider="type: environment"></a-entity>
+      <a-entity obj-model="mtl:stump02.mtl;obj:stump.obj" position="31.286 -1.174 211.483" scale="23.883 0.285 33.993" id="starter-2" n-mesh-collider="type: environment"></a-entity>
+      <a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="87.706 -1.174 211.483" scale="23.883 0.285 33.993" id="starter-3" n-mesh-collider="type: environment"></a-entity>
+      <a-entity obj-model="mtl:stump04.mtl;obj:stump.obj" position="123.103 -1.174 211.483" scale="23.883 0.285 33.993" id="starter-4" n-mesh-collider="type: environment"></a-entity>
+
+
+      <a-entity obj-model="mtl:stump04.mtl;obj:stump.obj" position="-180.661 -364.628 380.215" scale="321.686 24.347 98.892" id="starter-5" n-mesh-collider="type:environment"></a-entity>
+      <a-entity id="thing1">
+          <a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="87.706 -1.174 264.386" scale="23.883 0.285 33.993" id="starter-6"n-mesh-collider="type: environment"></a-entity>
+          <a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="77.678 -1.174 298.295" scale="23.883 0.285 33.993" id="starter-7" n-mesh-collider="type: environment"></a-entity>
+          <a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="77.678 -1.527 338.68" scale="23.883 2.349 33.993" id="starter-8" rotation="0 0 -5.901465289847479" n-mesh-collider="type: environment"></a-entity>
+          <a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="77.678 -5.844 380.051" scale="23.883 3.129 33.993" id="starter-9" rotation="0 0 6.990085100596043" n-mesh-collider="type: environment"></a-entity>
+          <a-entity obj-model="mtl:stump03.mtl;obj:stump.obj" position="77.678 -1.527 423.105" scale="68.086 3.649 33.993" id="starter-10" n-mesh-collider="type: environment"></a-entity>
+      </a-entity>
+      <!--begin bushes-->
+      <a-entity id="bushes" position="32.385 -0.904 59.372">
+          <a-entity id="bush" position="-4.892 2.405 11.119" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-2" position="-5 2.405 13.286" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-3" position="-1.68 2.405 16.122" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-4" position="-4.107 2.405 17.681" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-5" position="-9.249 2.405 16.443" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-6" position="-6.084 2.405 20.292" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-7" position="-8.158 2.405 18.874" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-8" position="-4.634 2.405 19.538" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-9" position="-7.896 2.405 31.607" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-10" position="-7.913 2.405 34.359" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-11" position="-9.069 2.405 33.648" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-12" position="-11.281 2.405 31.014" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-13" position="-13.887 2.405 31.459" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity><a-entity id="bush-14" position="-15.612 2.405 31.944" scale="0.343 0.343 0.343">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity>
+              <a-entity id="bush2" position="3.789 4.829 0">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity><a-entity id="bush2-2" position="-0.504 4.829 3.475">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity><a-entity id="bush2-3" position="-2.078 4.829 29.812">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity><a-entity id="bush2-4" position="-9.218 4.829 29.13">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity><a-entity id="bush2-5" position="-20.846 4.829 15.662">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity><a-entity id="bush2-7" position="-12.519 4.829 3.62">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity><a-entity id="bush2-6" position="-19.19 4.829 29.669">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity>          
+
+      </a-entity><!--end bushes-->
+      <!--begin bushes 2-->
+      <a-entity id="bushes-2" position="15.616 -0.904 -43.568">
+          <a-entity id="bush" position="0 4.829 0">
+
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" scale="0.551 1 1"></a-entity>
+              <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush1.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+              </a-entity>
+              <a-entity id="bush2" position="-4.195 4.829 -9.293">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity><a-entity id="bush2-8" position="-13.512 1.732 5.332" scale="0.212 0.212 0.212">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1" position="0.556 0 -7.317"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1" position="-13.723 0 -3.693"></a-entity>
+                  </a-entity><a-entity id="bush2-9" position="-12.95 1.732 5.684" scale="0.212 0.212 0.212">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity><a-entity id="bush2-10" position="-14.381 1.732 6.398" scale="0.212 0.212 0.212">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1" position="0.764 0 7.185"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1" position="-6.778 0 1.254"></a-entity>
+                  </a-entity><a-entity id="bush2-11" position="-13.18 1.732 7.361" scale="0.212 0.212 0.212">
+
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" scale="0.551 1 1"></a-entity>
+                  <a-entity geometry="primitive:plane;height:10;width:10" material="side:double;transparent:true;src:bush2.png" rotation="0 90 0" scale="0.551 1 1"></a-entity>
+                  </a-entity>          
+
+      </a-entity> <!--end bushes 2-->
+      <!--  
+      <a-entity id="test">
+          <a-entity geometry="primitive: plane; height: 10; width: 10" material="side: double;transparent:false;alphaTest: 0.5;src:bush.png"></a-entity>
+      </a-entity>
+    -->
+    <a-entity id="trees">
+   
+        <a-entity id="tree" position="66.107 0 0">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-9" position="-82.504 0 76.015">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-5" position="15.692 0 100.557">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-2" position="-83.472 0 12.73">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-16" position="-51.99 0 7.553">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-17" position="-56.379 0 22.45" scale="1 2.298 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-18" position="-46.223 0 18.597" scale="1 0.8880000000000001 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-19" position="-40.83 0 9.008" scale="1 0.8880000000000001 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-6" position="-64.671 0 -26.085" scale="1 1.58 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-3" position="-21.813 0 -140.95">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-7" position="109.25 0 68.636">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-4" position="57.314 0 -87.326" scale="1 0.6230000000000002 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-8" position="53.382 0 43.72" scale="1 0.6230000000000002 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-10" position="8.554 0 36.389" scale="1 0.6230000000000002 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-11" position="9.422 0 44.175" scale="1 0.337 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-12" position="-19.531 0 32.075" scale="1 0.281 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-13" position="-27.319 0 39.707" scale="1 0.211 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-14" position="-15.402 0 48.178" scale="1 0.211 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-15" position="-59.058 0 37.586" scale="1 0.211 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity>
+        <a-entity id="tree" position="88.924 0 154.33">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-9" position="110.066 0 0">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-5" position="-44.198 0 147.961">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-2" position="-323.532 0 -118.59">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-6" position="-120.094 0 88.939">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-3" position="107.374 0 125.442">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-7" position="-489.287 14.283 -522.253">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-4" position="3.917 0 -87.173" scale="1 0.6230000000000002 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-8" position="-12.283 0 -53.073" scale="1 0.6230000000000002 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity>
+
+        <a-entity id="tree" position="-119.535 30.993 -126.922">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-9" position="-157.341 0 0.209">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-5" position="28.425 5.462 -21.192">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-2" position="111.195 0 12.73">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-6" position="0 0 156.858">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-3" position="20.04 0 -6.705">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-7" position="-232.942 34.851 -125.064">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-4" position="-93.301 0 -89.597" scale="1 0.6230000000000002 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity><a-entity id="tree-8" position="-0.453 0 -72.444" scale="1 0.6230000000000002 1">
+            <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+         
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+            <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+        </a-entity>
+                  
+    </a-entity>
+      <!--end trees-->
+<!--begin trees2-->
+<a-entity id="trees2">
+    <a-entity id="tree-6" position="0 0 156.858">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-20" position="-9.39 0 177.771" rotation="0 -0.67 0" scale="1 0.62 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-21" position="-57.518 0 158.639" rotation="0 -0.67 0" scale="1 0.62 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-22" position="-42.021 0 134.072" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-23" position="-104.475 0 147.946" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-24" position="-89.643 0 176.005" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-25" position="10.987 0 174.385" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-26" position="-33.533 0 104.11" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-27" position="16.472 0 136.979" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-28" position="-38 0 114.675" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-29" position="-161.003 0 91.136" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-30" position="-174.563 0 63.639" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-31" position="-188.844 0 70.751" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-32" position="-179.009 0 109.135" rotation="0 -0.67 0" scale="1 0.9330000000000003 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-33" position="-197.305 0 39.623" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-34" position="-213.551 0 54.037" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-35" position="-196.62 0 80.077" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-36" position="-173.495 0 73.208" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-37" position="-166.401 0 65.74" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-38" position="-152.353 0 81.042" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-39" position="-155.49 0 50.74" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-40" position="-149.618 0 23.534" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-41" position="-132.727 0 9.223" rotation="0 -0.67 0" scale="1 0.38300000000000023 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity><a-entity id="tree-42" position="-139.057 0 33.756" rotation="0 -1.09 0" scale="1 0.9830000000000002 1">
+        <a-entity position="-0.041 0 0" geometry="primitive:dodecahedron" id="trunk" material="color:#49306B" scale="1 35.623 1"></a-entity>
+     
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone" material="transparent:true;src:tree_cone.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_light_purple" material="transparent:true;src:tree_cone_light_purple.png"></a-entity>
+        <a-entity position="-0.3 26.496 0" scale="2.576 41.168 2.809" geometry="primitive:cone" id="tree_cone_imerial" material="opacity:0.5;transparent:true;src:tree_cone_imperial.png"></a-entity>
+    </a-entity>
+</a-entity>
+<!--end trees 2-->
+            <!--ground/sky-->
+
+        <a-sky src="#sky" radius="2500"></a-sky>
+        <a-plane position="0 -1.03 -4" rotation="-90 0 0" width="4000" height="4000" material="repeat:4000 4000;color:#FFDAB9;src:#floor;" altspace-cursor-collider="enabled:false"></a-plane> 
+        <a-plane id="maptest" position="-66.499 -0.8500000000000001 126.997" rotation="-90 0 0" width="1000" height="1000" material="transparent:true;src:#maptest;" altspace-cursor-collider="enabled:false" scale="0.417 0.433 0.528"></a-plane>
+      </a-scene>
+<!--
+  https://coolors.co/ffdab9-dac4f7-49306b-f4989c-acecf7  
+  #FFDAB9 - PEACH PUFF - 255,218,185
+  #DAC4F7 - PALE LAVENDER - 218,196,247
+  #49306B - IMPERIAL - 73,48,107
+  #F4989C - LIGHT SALMON PINK - 244,152,156
+  #ACECF7 - PALE TURQUOISE - 172,236,247
+-->
+</body></html>

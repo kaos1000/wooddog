@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://sdk.altvr.com/libs/altspace.js/2.9.0/altspace.min.js"></script>
+</head>
+<body>
+<!-- set up the scene -->
+<a-scene altspace='fullspace:true;'>
+
+    <!-- preload all our textures -->
+    <a-assets>
+        <img id='moon' src='moon.jpg'/>
+        <img id='stars' src='stars.png'/>
+        <img id='btn' src='btn1.png'/>
+        <img id='hull' src='hull.jpg'/>      
+        <img id='grate' src='grate.png'/>  
+        <img id='trovia' src='planet_trovia.jpg'/>  
+    </a-assets>
+
+    <a-sphere position="-296.251 -70.501 -164.22" material="src:#trovia;" rotation="274.614 30.464 0" id="moon1" scale="1.001 1.001 1.001">
+   
+        <!-- add an animation to make it rotate -->
+        <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite">
+    </a-animation>
+    <a-animation attribute="scale"  to="251.823 251.823 251.823" dur="200000" begin="trovia"></a-animation>
+    <a-animation attribute="scale" from="251.823 251.823 251.823" to=".1 .1 .1" dur="200000" delay="205000" begin="trovia"></a-animation>
+    <a-animation attribute="position" from="" to="297.541 70.501 -636.042" dur="200000" delay="205000" begin="trovia"></a-animation>
+
+</a-sphere>
+<a-sphere position="-296.251 -70.501 -164.22" material="emissive:#FF0000;opacity:.3;" rotation="274.614 30.464 0" id="moon2" scale="2 2 2">
+          <!-- add an animation to make it rotate -->
+          <a-animation to="0 360 0" easing="linear" dur="200000" repeat="indefinite">
+            </a-animation>
+            <a-animation attribute="scale"  to="261.823 261.823 261.823" dur="200000" begin="trovia"></a-animation>
+            <a-animation attribute="scale" from="261.823 261.823 261.823" to="2 2 2" dur="200000" delay="205000" begin="trovia"></a-animation>
+            <a-animation attribute="position" from="" to="297.541 70.501 -636.042" dur="200000" delay="205000" begin="trovia"></a-animation>
+    </a-sphere>
+    <!-- add the backdrop of stars -->
+    <a-sky src='#stars' radius='2500' id="the_sky" position="" rotation="" scale="">
+
+            <a-animation to="0 360 0" easing="linear" dur="250000" repeat="indefinite"  id="star_anim">
+                   
+    </a-sky>
+
+        <!--ground/sky-->
+        <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165" rotation="-38.80136368210983 -1208.0242228532563 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera"></a-entity>
+        <a-entity position="0 -0.083 0" geometry="width:37" id="floor" material="repeat:37 .4;transparent:true;color:#E0E0CE;src:#grate;" scale="1 0.153 1"></a-entity>
+        <a-sphere material="repeat:4 4;side:double;transparent:true;src:#grate;" id="dome" scale="46.042 16.929 46.042" position="0 30.979 0"></a-sphere>
+<!--begin control panel-->
+<a-entity id="cp_position">
+        <a-entity position="4.106 0.892 1.755" geometry="" material="color:#474747;src:#btn" id="panel"></a-entity>
+        <a-entity position="3.907 0.892 1.222" geometry="" material="color:#474747;src:#btn" scale="0.15 0.15 0.15" id="btn2"></a-entity>
+        <a-entity position="4.28 0.892 1.222" geometry="" material="color:#474747;src:#btn" scale="0.15 0.15 0.15" id="btn1"></a-entity>
+</a-entity>
+
+<!--end control panel-->
+
+        <!--begin station sub structure-->
+        <a-entity id="sub_structure" position="0 18.748 0"> 
+
+                <a-cylinder id="grey_pole" radius="0.5" height="1.5" material="color:#474747;src:#btn" position="0 -13.882 0" scale="1 18.448 1"></a-cylinder>
+                <a-cylinder id="yellow_pole" radius="0.5" height="1.5" material="color:#F2AF29;src:#btn" position="8.887 -13.882 0" scale="1 18.448 1"></a-cylinder>
+                <a-cylinder id="bone_pole" radius="0.5" height="1.5" material="color:#E0E0CE;src:#btn" position="-9.539 -13.882 0" scale="1 18.448 1"></a-cylinder>
+                <a-cylinder id="red_pole" radius="0.5" height="1.5" material="color:#AC1838;src:#btn" position="17.696 -13.882 0" scale="1 18.448 1"></a-cylinder>
+                <a-cylinder id="light_red_pole" radius="0.5" height="1.5" material="color:#C2576E;src:#btn" position="-17.933 -13.882 0" scale="1 18.448 1"></a-cylinder>
+        </a-entity>
+        <!--
+        <a-plane position="0 0 -4" rotation="-90 0 0" width="4000" height="4000" color="#E0E0CE"></a-plane>    
+-->
+    </a-scene>
+
+    <script>
+            //grab aframe scene 
+          var sceneEl = document.querySelector('a-scene');
+            //grab buttons (in this scene there are 4)
+            var btn1 = sceneEl.querySelector('#btn1');
+           //var btn2 = sceneEl.querySelector('#btn2');
+
+      //grab actual elevator "floor" element id #lift
+           var moon1 = sceneEl.querySelector('#moon1');
+           var moon2 = sceneEl.querySelector('#moon2');
+            var star_anim;
+                   //console.log(moon);       
+            btn1.addEventListener('mousedown', function (event) {
+
+              moon1.emit('trovia', 'text', true);
+              moon2.emit('trovia', 'text', true);
+            });
+            btn1.addEventListener('mouseup', function (event) {
+               
+                //the_sky.emit('right_stop', 'text', true);
+               // star_anim =  sceneEl.querySelector('#star_anim');
+                //console.log(the_sky.object3D.rotation);
+                //star_anim.setAttribute('from', the_sky.getAttribute('position'));
+               // the_sky.object3D.rotation.y = sky_new_pos.object3D.rotation.y;
+                //the_sky.position = sky_new_pos.position;
+            });
+
+      
+          </script>
+<!--
+https://coolors.co/474747-f2af29-C2576E-e0e0ce-ac1838
+-->
+</body></html>
