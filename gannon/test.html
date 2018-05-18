@@ -1,6 +1,7 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://rawgit.com/fernandojsg/aframe-teleport-controls/master/dist/aframe-teleport-controls.min.js"></script>
   </head>
   <body>
     <a-scene>
@@ -11,6 +12,19 @@
       <a-sky color="#ECECEC"></a-sky>
       <a-entity gearvr-controls></a-entity>
       <a-entity laser-controls="hand: right"></a-entity>
+           <!-- hand controls -->
+           <a-entity teleport-controls="startEvents: teleportstart; endEvents: teleportend"
+           vive-controls="hand: left"
+           oculus-touch-controls="hand: left"
+           microsoft-motion-controls="hand: left"
+           daydream-controls="left" gearvr-controls="left">
+         </a-entity>
+         <a-entity teleport-controls="startEvents: teleportstart; endEvents: teleportend; type: line"
+           vive-controls="hand: right"
+           microsoft-motion-controls="hand: right"
+           oculus-touch-controls="hand: right"
+           daydream-controls="right" gearvr-controls="right">
+         </a-entity>
     </a-scene>
   </body>
 </html>
