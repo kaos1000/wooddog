@@ -23,10 +23,10 @@
           <a-entity geometry="primitive:sphere" position="0.086 2.887 -2.89" radius="1.25" color="#EF2D5E"></a-entity>
           <a-entity position="5.025 2.777 -3" radius="0.5" height="1.5" color="#FFC65D" geometry="radiusTubular:0.04000000000000001;primitive:torus"></a-entity>
  
-          <a-entity progressive-controls="objects: a-box"></a-entity>
+          <a-entity progressive-controls="objects: a-box" altspace-cursor-collider='enabled: false'></a-entity>
           <!-- hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
           <a-box hoverable grabbable stretchable draggable dropppable
-          color="blue" position="0 0 -1"></a-box>
+          color="blue" position="0 0 -1" altspace-cursor-collider='enabled: false'></a-box>
 
 
 
