@@ -20,22 +20,24 @@
       </a-assets>
       <a-entity id="main" position="0 0 -6.41">
           
-        <a-entity geometry="primitive:sphere" position="0.086 2.887 -2.89" radius="1.25" color="#EF2D5E"></a-entity>
+          <a-entity geometry="primitive:sphere" position="0.086 2.887 -2.89" radius="1.25" color="#EF2D5E"></a-entity>
 
-  
-        <a-entity progressive-controls="objects:a-box" altspace-cursor-collider="enabled:false"><a-camera position="0 1.6 0" camera="active:false" look-controls="" wasd-controls="" data-aframe-inspector-original-camera=""><a-entity mixin="progressivecontrolsgazedefault "></a-entity></a-camera><a-entity daydream-controls="hand:left" gearvr-controls="hand:left" oculus-touch-controls="" vive-controls="" windows-motion-controls="hand:left"></a-entity><a-entity daydream-controls="hand:right" gearvr-controls="hand:right" oculus-touch-controls="hand:right" vive-controls="hand:right" windows-motion-controls=""></a-entity></a-entity>
-    <!--  hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
-        <a-box id="obj1" hoverable="" grabbable="maxGrabbers:NaN" stretchable="" draggable="" dropppable="" color="blue" position="4.615 2.527 -4.209" altspace-cursor-collider="enabled:false">
-        <a-entity color="#4CC3D9" geometry="primitive:torus;radiusTubular:0.04" id="thetest"></a-entity>
+    
+          <a-entity progressive-controls="objects: a-box" altspace-cursor-collider='enabled: false'></a-entity>
+      <!--  hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
+          <a-box id="obj1" hoverable grabbable stretchable draggable dropppable
+          color="blue" position="0 0 -1" altspace-cursor-collider='enabled: false'>
+          <a-entity position="" color="#4CC3D9" geometry="radiusTubular:0.04;primitive:torus" id="thetest"></a-entity>
+        </a-box>
+
+        <a-box id="obj1" hoverable grabbable stretchable draggable dropppable
+        color="blue" position="0 0 -1" altspace-cursor-collider='enabled: false'>
+        <a-entity  radius="0.5" height="1.5" color="#FFC65D" geometry="radiusTubular:0.04000000000000001;primitive:torus"></a-entity>
       </a-box>
 
-      <a-box id="obj2" hoverable="" grabbable="maxGrabbers:NaN" stretchable="" draggable="" dropppable="" color="blue" position="-4.713 2.47 -4.668" altspace-cursor-collider="enabled:false">
-      <a-entity radius="0.5" height="1.5" color="#FFC65D" geometry="primitive:torus;radiusTubular:0.04000000000000001"></a-entity>
-    </a-box>
 
 
-
-    </a-entity>
+      </a-entity>
         <a-sky src="#space" radius="2500"></a-sky>
         <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165"  look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" gearvr-controls>
             <a-cursor></a-cursor>
