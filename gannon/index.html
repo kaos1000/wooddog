@@ -51,12 +51,13 @@
 </a-entity>
 
       </a-entity>
-      <a-entity progressive-controls="objects: a-box" altspace-cursor-collider='enabled: false'></a-entity>
+      <a-entity progressive-controls="objects: a-box">
+         <a-entity position="1 1 10" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165"  look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" gearvr-controls>
+            <a-cursor> </a-cursor>
+        </a-entity>       
+      </a-entity>
         <a-sky src="#space" radius="2500"></a-sky>
-        <a-entity position="1 1 10" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165"  look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" gearvr-controls>
-            <a-cursor></a-cursor>
-        
-        </a-entity>
+
   
       </a-scene>
   </body>
