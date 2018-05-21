@@ -18,12 +18,12 @@
       <a-assets>
         <img id="space" src="space.png">
       </a-assets>
-      <a-entity id="main" position="0 0 0" geometry="">
-          
+      <a-entity id="main" position="0 0 0" >
+          <a-entity id="group" position="0 6.965 0">
           <a-entity geometry="primitive:sphere" scale="0.534 0.534 0.534" position="0 2 -7" radius=".02" color="#EF2D5E"></a-entity>
 
     
-          <a-entity progressive-controls="objects: a-box" altspace-cursor-collider='enabled: false'></a-entity>
+       
       <!--  hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
           <a-box id="obj1" hoverable grabbable stretchable draggable dropppable
           color="blue" opacity="0" position="-3 2 -7" altspace-cursor-collider='enabled: false'>
@@ -48,9 +48,10 @@
         </a-entity>
       </a-box>
 
-
+</a-entity>
 
       </a-entity>
+      <a-entity progressive-controls="objects: a-box" altspace-cursor-collider='enabled: false'></a-entity>
         <a-sky src="#space" radius="2500"></a-sky>
         <a-entity position="1 1 10" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165"  look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" gearvr-controls>
             <a-cursor></a-cursor>
