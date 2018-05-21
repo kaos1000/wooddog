@@ -18,7 +18,7 @@
       <a-assets>
         <img id="space" src="space.png">
       </a-assets>
-      <a-entity id="main" position="0 0 -6.41">
+      <a-entity id="main" position="0 0 0" geometry="">
           
           <a-entity geometry="primitive:sphere" position="0 1 0" radius="1.25" color="#EF2D5E"></a-entity>
 
@@ -26,12 +26,12 @@
           <a-entity progressive-controls="objects: a-box" altspace-cursor-collider='enabled: false'></a-entity>
       <!--  hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
           <a-box id="obj1" hoverable grabbable stretchable draggable dropppable
-          color="blue" position="-1 1 0" altspace-cursor-collider='enabled: false'>
+          color="blue" position="-1 1 -7" altspace-cursor-collider='enabled: false'>
           <a-entity position="" color="#4CC3D9" geometry="radiusTubular:0.04;primitive:torus" id="thetest"></a-entity>
         </a-box>
 
         <a-box id="obj2" hoverable grabbable stretchable draggable dropppable
-        color="blue" position="1 1 0" altspace-cursor-collider='enabled: false'>
+        color="blue" position="1 1 -7" altspace-cursor-collider='enabled: false'>
         <a-entity  radius="0.5" height="1.5" color="#FFC65D" geometry="radiusTubular:0.04000000000000001;primitive:torus"></a-entity>
       </a-box>
 
@@ -39,7 +39,7 @@
 
       </a-entity>
         <a-sky src="#space" radius="2500"></a-sky>
-        <a-entity position="1 1 1" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165"  look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" gearvr-controls>
+        <a-entity position="1 1 10" camera="active:true;userHeight:1.6" wasd-controls="easing:20.01;fly:true;acceleration:165"  look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" data-aframe-inspector="default-camera" gearvr-controls>
             <a-cursor></a-cursor>
         
         </a-entity>
