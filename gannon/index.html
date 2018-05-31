@@ -1,5 +1,5 @@
 <head>
-  <title>Most Basic Super-Hands Example</title>
+  <title>Gannon Demo 5/31/2018</title>
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
   <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
   <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
@@ -13,11 +13,23 @@
     <a-entity progressive-controls="objects: a-torus" position="0 0 4"></a-entity>
     <!-- hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
     <a-torus radius-tubular="0.04" hoverable grabbable stretchable draggable dropppable
-    color="blue" position="-4 0 0"></a-torus>
+    material="color: red" position="-4 0 0">
+    <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite" easing="linear"></a-animation>
+  </a-torus>
 
     <a-torus radius-tubular="0.04" hoverable grabbable stretchable draggable dropppable
-    color="green" position="4 0 0"></a-torus>
-
+    material="color: blue" position="4 0 0">
+    <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite" easing="linear"></a-animation>
+  </a-torus>
+    <a-sphere material="color: red" radius=".2" position="0 0 0"></a-sphere>
     <a-sky src="#space" radius="2500"></a-sky>
   </a-scene>
 </body>
