@@ -30,7 +30,23 @@
                to="0 360 0"
                repeat="indefinite" easing="linear"></a-animation>
   </a-torus>
-    <a-sphere material="color:red;src:#my-video" radius=".4" position="0 0 0"></a-sphere>
+  <!--begin sphere-->
+    <a-sphere material="src:water.jpg;color:red;" radius=".4" position="0 0 0">
+        <a-animation attribute="rotation"
+        dur="6000"
+        fill="forwards"
+        to="0 360 -360"
+        repeat="indefinite" easing="linear"></a-animation>
+
+      <a-sphere material="src:water.jpg;color:#fcd66c;opacity:.2" radius=".49" position="0 0 0">
+        <a-animation attribute="rotation"
+        dur="10000"
+        fill="forwards"
+        to="0 360 360"
+        repeat="indefinite" easing="linear"></a-animation>
+      </a-sphere>
+    </a-sphere>
+      <!--end sphere-->
     <a-sky src="#space" radius="2500"></a-sky>
   </a-scene>
 </body>
