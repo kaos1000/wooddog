@@ -26,7 +26,7 @@
        
       <!--  hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
           <a-box id="obj1" hoverable grabbable stretchable draggable dropppable
-          color="blue" opacity="0" position="-3 2 -7" altspace-cursor-collider='enabled: false'>
+          color="blue" opacity="0" position="-3 2 -7">
           <a-entity position="" color="#4CC3D9" geometry="radiusTubular:0.04;primitive:torus" id="thetest">
             <a-animation attribute="rotation"
             dur="10000"
@@ -38,7 +38,7 @@
         </a-box>
 
         <a-box id="obj2" hoverable grabbable stretchable draggable dropppable
-        color="blue" opacity="0" position="3 2 -7" altspace-cursor-collider='enabled: false'>
+        color="blue" opacity="0" position="3 2 -7">
         <a-entity  radius="0.5" height="1.5" color="#FFC65D" geometry="radiusTubular:0.04000000000000001;primitive:torus">
           <a-animation attribute="rotation"
           dur="10000"
@@ -52,7 +52,7 @@
 
       </a-entity>
       <a-entity progressive-controls="objects: a-box">
-         <a-entity position="" camera="" wasd-controls="easing:20.01;fly:true;acceleration:165"  look-controls="">
+         <a-entity position="" camera=""  gearvr-controls="">
             <a-cursor> </a-cursor>
         </a-entity>       
       </a-entity>
