@@ -7,13 +7,17 @@
 
 <body>
   <a-scene>
-    <a-assets></a-assets>
-    <a-entity progressive-controls="objects: a-torus" position="0 0 5"></a-entity>
+    <a-assets>
+      <img id="space" src="space.png">
+    </a-assets>
+    <a-entity progressive-controls="objects: a-torus" position="0 0 4"></a-entity>
     <!-- hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
     <a-torus radius-tubular="0.04" hoverable grabbable stretchable draggable dropppable
     color="blue" position="-4 0 0"></a-torus>
 
     <a-torus radius-tubular="0.04" hoverable grabbable stretchable draggable dropppable
     color="green" position="4 0 0"></a-torus>
+
+    <a-sky src="#space" radius="2500"></a-sky>
   </a-scene>
 </body>
