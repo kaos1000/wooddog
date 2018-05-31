@@ -1,82 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-
-    <title>Gannon Demo</title>
-
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
-    <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
-
-
-
+<head>
+  <title>Most Basic Super-Hands Example</title>
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
 </head>
 
-  <body>     
-  
-    <a-scene altspace="fullspace:true;">
-      <a-assets>
-        <img id="space" src="space.png">
-      </a-assets>
-      <a-entity id="main" position="0 0 0" >
-          <a-entity id="group" position="0 8.965 0">
-          <a-entity geometry="primitive:sphere" scale="0.534 0.534 0.534" position="0 2 -7" radius=".02" color="#EF2D5E"></a-entity>
-
-    
-       
-      <!--  hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
-          <a-box id="obj1" hoverable grabbable stretchable draggable dropppable
-          color="blue" opacity="0" position="-3 2 -7">
-          <a-entity position="" color="#4CC3D9" geometry="radiusTubular:0.04;primitive:torus" id="thetest">
-            <a-animation attribute="rotation"
-            dur="10000"
-            fill="forwards"
-            to="360 0 0"
-            repeat="indefinite" easing="linear"></a-animation>
-
-          </a-entity>
-        </a-box>
-
-        <a-box id="obj2" hoverable grabbable stretchable draggable dropppable
-        color="blue" opacity="0" position="3 2 -7">
-        <a-entity  radius="0.5" height="1.5" color="#FFC65D" geometry="radiusTubular:0.04000000000000001;primitive:torus">
-          <a-animation attribute="rotation"
-          dur="10000"
-          fill="forwards"
-          to="0 360 0"
-          repeat="indefinite" easing="linear"></a-animation>
-        </a-entity>
-      </a-box>
-      <a-animation attribute="position"  to="0 2 0"></a-animation>
-</a-entity>
-
-      </a-entity>
-      <a-entity progressive-controls="objects: a-box">
-         <a-entity position="" camera=""  gearvr-controls="">
-            <a-cursor> </a-cursor>
-        </a-entity>       
-      </a-entity>
-        <a-sky src="#space" radius="2500"></a-sky>
-
-  
-      </a-scene>
-  </body>
-</html>
-
-<!--
-Distant orb floating in outer space. Distant orb floating in outer space. 
-Space w/ Glowing red orb in the distence
-2 rings appear 2 rings: red=headset/ blue=controller
-2 rings: red=headset/ blue=controller
-"Now, notice the blue ring is controlled by the movement of your hand controller"
-Make both rings surround the orb
-Once two rings surround orb: 
-Hyper Space (move forward to the red orb) Blue orb is same size and to the right of red orb
-Keep the red ring around red orb, blue ring around blue orb.
-
-Both orbs begin counter clockwise orbits
-orbits are same size as rings. orbs complete full orbit every five seconds.
- Orb grows in size with each orbit. 
- At beginning of 5th orbit, orb will outsize ring, ending baseline measurement. 
- Users failure to keep orbs inside rings will also end measurement.
--->
+<body>
+  <a-scene>
+    <a-assets></a-assets>
+    <a-entity progressive-controls="objects: a-torus"></a-entity>
+    <!-- hover & drag-drop won't have any obvious effect without some additional event handlers or components. See the examples page for more -->
+    <a-torus radius-tubular="0.04" hoverable grabbable stretchable draggable dropppable
+    color="blue" position="0 0 -1"></a-torus>
+  </a-scene>
+</body>
